@@ -1,0 +1,39 @@
+[
+    {
+        "name": "Andrei",
+        "email": "addd@example.com",
+        "password": "andru123",
+        "imageURL": "http://example.com/john.jpg",
+        "phoneNumber": "0004567890",
+        "services": [],
+        "bookings": []
+    },
+    {
+        "name": "Miguel",
+        "email": "alehandro@example.com",
+        "password": "smecheru",
+        "imageURL": "http://example.com/john.jpg",
+        "phoneNumber": "079292929",
+        "services": [],
+        "bookings": []
+    },
+    {
+        "name": "Ionut Bibanu",
+        "email": "somon@example.com",
+        "password": "pescaru79",
+        "imageURL": "http://example.com/john.jpg",
+        "phoneNumber": "0773900902",
+        "services": [],
+        "bookings": []
+    },
+    {
+        "name": "Kutnik",
+        "email": "printesa@example.com",
+        "password": "calinvtm",
+        "imageURL": "http://example.com/john.jpg",
+        "phoneNumber": "0756222333",
+        "services": [],
+        "bookings": []
+    }
+
+]

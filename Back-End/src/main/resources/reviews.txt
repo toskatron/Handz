@@ -1,0 +1,29 @@
+{
+    "user": {
+        "userId": 1
+    },
+    "handyman": {
+        "handymanId": 1
+    },
+    "service": {
+        "serviceId": 1
+    },
+    "rating": 4,
+    "comment": "Great service! Very satisfied with the work.",
+    "reviewDateTime": "2024-01-13T12:30:00"
+}
+
+{
+    "user": {
+        "userId": 1
+    },
+    "handyman": {
+        "handymanId": 1
+    },
+    "service": {
+        "serviceId": 1
+    },
+    "rating": 4,
+    "comment": "Great service! Very satisfied with the work.",
+    "reviewDateTime": "2024-01-13T12:30:00"
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "expertise": "Plumbing",
+    "availability": "Monday to Friday",
+    "pricing": 50,
+    "description": "Fixing plumbing issues",
+    "handymen": [
+        {
+                "handymanId": 1
+      }
+    ]
+  },
+  {
+    "expertise": "Electrical",
+    "availability": "Weekends",
+    "pricing": 60,
+    "description": "Electrical installations and repairs",
+
+  }
+]

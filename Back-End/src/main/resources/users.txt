@@ -1,0 +1,43 @@
+[
+  {
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "password": "securepassword123",
+    "imageURL": "https://example.com/johndoe.jpg",
+    "phoneNumber": 1234567890,
+    "bookings": [
+      {
+        "bookingId": 101,
+        "bookingDate": "2023-12-06",
+        "bookingDetails": "Reservation for vacation"
+      },
+      {
+        "bookingId": 102,
+        "bookingDate": "2023-12-10",
+        "bookingDetails": "Business trip"
+      }
+    ]
+  },
+  {
+    "name": "Jane Smith",
+    "email": "jane.smith@example.com",
+    "password": "strongpassword456",
+    "imageURL": "https://example.com/janesmith.jpg",
+    "phoneNumber": 123456789,
+    "bookings": [
+      {
+        "bookingId": 201,
+        "bookingDate": "2023-12-08",
+        "bookingDetails": "Weekend getaway"
+      }
+    ]
+  }
+  {
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "password": "strongpassword456",
+      "imageURL": "https://example.com/janesmith.jpg",
+      "phoneNumber": 123456789,
+      "bookings": []
+   }
+]

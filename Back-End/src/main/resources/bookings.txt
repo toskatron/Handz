@@ -1,0 +1,34 @@
+[
+  {
+    "user": {
+      "userId": 1,
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "password": "securepassword123",
+      "imageURL": "https://example.com/johndoe.jpg",
+      "phoneNumber": 1234567890
+    },
+    "handyman": {
+      {
+              "handymanId": 1,
+              "name": "Andrei",
+              "email": "addd@example.com",
+              "password": "andru123",
+              "imageURL": "http://example.com/john.jpg",
+              "phoneNumber": "0004567890",
+              "services": [],
+              "bookings": []
+          }
+    },
+    "service": {
+                   "serviceId": 1,
+                   "expertise": "Plumbing",
+                   "availability": "Monday to Friday",
+                   "pricing": 50,
+                   "description": "Fixing plumbing issues",
+                   "handymen": []
+                 }
+    "bookingTime": "2023-12-06"
+    "status": "accepted"
+  }
+]
