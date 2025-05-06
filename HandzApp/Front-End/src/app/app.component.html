@@ -1,0 +1,52 @@
+
+<style>
+  header.topnav {
+
+  }
+
+</style>
+<div *ngIf="showMainContent">
+<body>
+
+<header class="topnav">
+  <div class="logo-container" *ngIf="showMainContent">
+    <img src="assets/logo.png" class="navbar-logo" />
+    <h2>Handz</h2>
+   
+  </div>
+  <nav class="navbar">
+    <h3 style="margin-right: 600px;">Your trusted helping hand</h3>
+    <button class="nav-button" id="autentificare-btn" [routerLink]="['/login']" (click)="openLoginDialog()">Login</button>
+    <button class="nav-button" id="creare-cont-client-btn" (click)="openCreateAccount()">Create account</button>
+    
+  </nav>
+</header>
+
+
+<div class="page-container" *ngIf="showMainContent">
+
+  <div class="hero-section">
+    
+    <div class="review-container">
+      
+      <div *ngFor="let review of reviews" class="review-card">
+        <div class="review-header">
+          <img [src]="review.user.imageURL" alt="Client Photo">
+          <div class="review-text">
+            <h3>From: {{review.user.name}}</h3>
+            <h4>For: {{ review.handyman.name }}</h4>
+            <h4>{{review.service.name}}</h4>
+            <p class="rating">{{ review.rating | starRating }}</p>
+            <p>{{ review.comment }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    
+  </div>
+</div>
+
+</body>
+</div>
+<router-outlet></router-outlet>

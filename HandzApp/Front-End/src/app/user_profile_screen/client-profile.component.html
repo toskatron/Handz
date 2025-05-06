@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Profile</title>
+
+</head>
+<body scroll="no" style="overflow: hidden">
+
+
+<div class="client-container">
+
+  <div class="client-content">
+    <div class="profile-header">
+      <img [src]="this.clientInfo?.imageURL" alt="Profile Picture" />
+      <div>
+        <h2>{{ clientInfo?.name }}</h2>
+        <p>Email: {{ clientInfo?.email }}</p>
+        <p>Phone Number: +40{{ clientInfo?.phoneNumber }}</p>
+      </div>
+    </div>
+    <br>
+    <button (click)="openEmergencyScreen(clientInfo)">Emergency!</button>
+  </div>
+
+
+
+
+
+</div>
+
+</body>
+
+</html>
+
+
+
+

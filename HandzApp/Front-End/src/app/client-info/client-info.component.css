@@ -1,0 +1,108 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+/* Style for the dashboard container */
+.dashboard {
+  display: flex;
+  top: 0;
+  bottom: 0;
+  min-height: 100vh;
+  height: 100vh;
+}
+
+/* Style for the navigation menu on the left */
+.dashboard-menu {
+  width: 250px;
+  background-color: #2c3e50; /* Darker shade for a more modern look */
+  color: #ecf0f1;
+  padding: 20px;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Remove default margin */
+}
+
+.dashboard-menu li {
+  padding: 15px 0; /* More vertical padding for better touch targets */
+}
+
+.dashboard-menu a {
+  text-decoration: none;
+  color: #ecf0f1;
+  font-weight: bold;
+  font-size: 18px; /* Slightly larger for readability */
+  display: block; /* Make the entire area clickable */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.dashboard-menu a:hover, .dashboard-menu a:focus {
+  color: #3498db; /* A different color for a more noticeable hover effect */
+  background-color: #34495e; /* Subtle background highlight */
+}
+
+.dashboard-content {
+  flex-grow: 1;
+  padding: 40px;
+  background-image: url('/assets/backgrounds/image6.png');
+  overflow-y: auto; /* Enable scrolling only for the .dashboard-content */
+  width: calc(100% - 250px);
+  height: 100%;
+}
+
+/* Optional: Add a hover effect to the list items */
+.dashboard-menu li:hover {
+  background-color: #34495e;
+  cursor: pointer;
+}
+
+/* Optional: Add a global font and remove the margin from the body for full page usage */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A more modern font */
+}
+
+.transparent-button {
+  background: transparent;
+  border: none;
+  color: inherit; /* or specify the color you want */
+  text-align: left;
+  padding: 0;
+  cursor: pointer;
+  font-size: inherit; /* Adjust as needed */
+}
+
+.transparent-button:hover {
+  text-decoration: underline; /* Optional: if you want to mimic link behavior */
+}
+
+.full-width-button {
+  width: 100%; /* Make the button full width */
+  background: transparent;
+  border: none;
+  color: inherit; /* Use the text color of the parent element */
+  text-align: left;
+  padding: 10px 15px; /* Adjust padding to match your design */
+  cursor: pointer;
+  font-size: inherit; /* Adjust font size as needed */
+  display: block; /* Make the button a block element */
+  font-weight: bold;
+}
+
+.full-width-button:hover {
+  background-color: #34495e; /* Replace with your hover color */
+}
+
+html, body {
+  overflow: hidden;
+  height: 100%;
+  max-height: 100%;
+}

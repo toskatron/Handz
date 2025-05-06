@@ -1,0 +1,223 @@
+/* Reset margin and padding for all elements to ensure consistent styling */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding does not affect the total width or height of an element */
+}
+html, body {
+  background-image: url('/assets/welcome_background.png');
+  background-size: cover; /* Ensures the image covers the entire viewport */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 100px center; /* Image positioned 100px from the left and centered vertically */
+  min-height: 100vh; /* Ensure minimum height is the full height of the viewport */
+  padding-bottom: 50px;
+  overflow-x: hidden;
+  height: 900vh; /* Expand html and body to the viewport's height */
+  width: 100vw; /* Expand html and body to the viewport's width */
+  max-height: 200vh; /* Ensure html and body don't expand past the viewport's height */
+  margin-top: -50px;
+  margin-left: -40px;
+  margin-right: -200px;
+  position: fixed;
+  size: 4in 6in;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background-position: 30% center; /* Image positioned 100px from the left and centered vertically */
+  min-height: 100vh; /* Ensure minimum height is the full height of the viewport */
+  padding-bottom: 50px;
+  overflow-x: hidden;
+  height: 900vh; /* Expand html and body to the viewport's height */
+  width: 100vw; /* Expand html and body to the viewport's width */
+  max-height: 200vh; /* Ensure html and body don't expand past the viewport's height */
+  margin-top: -50px;
+  margin-left: -30px;
+  margin-right: -200px;
+  position: fixed;
+  size: 4in 6in;
+  overflow-x: hidden;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.profile-header img {
+  border-radius: 50%;
+  width: 150px; /* Adjust the size as needed */
+  height: auto;
+}
+
+.profile-header > div {
+  flex-grow: 1;
+}
+
+
+.welcome-box {
+  width: 30%; /* Adjusted width */
+  padding: 10px;
+  background-color: #2F4F4F;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: fixed; /* Absolute position within client-container */
+  top: 45%; /* Start at the exact vertical center */
+  left: 57%; /* Start at the exact horizontal center */
+  transform: translate(-50%, -50%) translateY(-20px); /* Shift upwards */
+}
+
+
+/* Make text bolder and ensure it is legible against the background */
+h1, p {
+  font-weight: bolder; /* This will make your text bolder */
+  color: #ffffff; /* This will make your text white, adjust the color as needed */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Adds a shadow to make the text more legible against the background */
+}
+
+.content {
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  right: 50%;
+}
+
+
+.no-horizontal-scrollbar {
+  overflow-x: hidden;
+}
+
+.no-vertical-scrollbar {
+  overflow-y: hidden;
+}
+
+.no-scrollbars {
+  overflow: hidden;
+}
+
+/* Styles for the Add and Create buttons */
+.add-button, .create-button {
+  padding: 12px 20px; /* Increases the padding to make the button larger */
+  margin: 10px; /* Adds margin around the buttons */
+  font-size: 16px; /* Increases the font size */
+  border-radius: 8px; /* Optional: Rounds the corners of the buttons */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+  background-color: #3498db; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Removes the default border */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.floating-stack .search-bar {
+  margin-bottom: 1rem;
+  margin-left: 10px;
+}
+
+.floating-stack .scrollable-list {
+  overflow-y: auto;
+  max-height: 200px; 
+  margin-bottom: 1rem;
+  padding-left: 10px;
+}
+.floating-stack .scrollable-listms {
+  overflow-y: auto;
+  max-height: 300px; 
+  margin-bottom: 1rem;
+  padding-left: 10px;
+}
+.floating-stack {
+  background: #455a64;
+  color: #fff;
+  height: auto; /* Adjust height as needed */
+  width: 100%;
+  border-radius: 1rem;
+  padding-bottom: 1rem;
+}
+
+
+.floating-stack dl {
+  margin: 0;
+  padding: 0;
+}
+
+.floating-stack dd {
+  margin-left: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.container {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px; /* Adjust margin as needed */
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem; /* Same horizontal padding as floating-stack for alignment */
+  margin-top: 1rem;
+}
+.floating-stack .add-button,
+.floating-stack .create-button {
+  font-size: 0.8rem; /* Smaller font size for buttons */
+  padding: 0.5rem 1rem; /* Adjust padding to make buttons smaller */
+}
+
+/* Additional styles for hover effects or active states can be added here */
+
+/* Example for button hover effect */
+.floating-stack .add-button:hover,
+.floating-stack .create-button:hover {
+  background-color: #f2f2f2; /* Light grey background on hover */
+}
+.add-service-section input {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 8px;
+}
+.add-service-section input[type='text']:nth-child(2) {
+  font-size: 1.2em;
+}
+.add-service-section button {
+  margin: 10px 5px;
+  padding: 8px 16px;
+}
+.service-and-add-section {
+  position: relative;
+  width: 320px; /* Adjust width as needed */
+}
+.add-service-section {
+  position: absolute; /* Changed from fixed to absolute */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the container */
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  z-index: 10; /* Higher z-index to ensure it's on top */
+   /* Initially hidden display: none;*/
+}
+
+ .emergency{
+  background: #455a64;
+  color: #fff;
+  height: auto; /* Adjust height as needed */
+  width: 100%;
+  border-radius: 1rem;
+  padding-bottom: 1rem;
+}
+
+.profile-container{
+  display: inline-block;
+}

@@ -1,0 +1,23 @@
+<div class="client-container">
+  <div class="dashboard">
+    <nav class="dashboard-menu">
+      <ul>
+        <a><li><button class="full-width-button" [routerLink]="'/client-info/profile'">Profile</button></li></a>
+        <a><li> <button class="full-width-button" [routerLink]="'/client-info/booking'">Make a Booking</button></li></a>
+        <a><li><button class="full-width-button" [routerLink]="'/client-info/history'">My bookings</button></li></a>
+        <a><li><button class="full-width-button" [routerLink]="'/client-info/settings'">Settings</button></li></a>
+        <li><button class = "full-width-button"><a href="http://localhost:4200">Logout</a></button></li>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        
+        <h3>Contact us:</h3>
+        <br>
+        Phone:  +40773800604 <br><br>
+        Email:  handz.ade&#64;gmail.com
+      </ul>
+    </nav>
+    <div class="dashboard-content">
+      <router-outlet></router-outlet>
+    </div>
+    
+  </div>
+</div>

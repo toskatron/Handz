@@ -1,0 +1,518 @@
+.client-component {
+    position: relative;
+    width: 300px; /* Adjusted to match login */
+    padding: 20px; /* Adjusted to match login */
+    margin: 70px auto; /* Center the box on the page */
+    background: rgba(255, 255, 255, 0.4); /* Semi-transparent background */
+    border-radius: 10px; /* Adjusted to match login */
+    backdrop-filter: blur(15px); /* Blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: light border for definition */
+    display: flex;
+    flex-direction: column; /* Stacking fields vertically */
+    align-items: center;
+    justify-content: space-around; /* Distributes space evenly */
+    box-sizing: border-box;
+  }
+  .client-component h1{
+    margin-left: 100px;
+    width: 400px;
+  }
+  .inputbox {
+    position: relative;
+    width: 100%; /* Input boxes will fill the width of the .client-component */
+    margin-bottom: 20px; /* Adjusted spacing between input fields */
+  }
+  
+  .inputbox input {
+    width: calc(100% - 20px); /* Adjust width to allow for padding */
+    padding: 15px 10px;
+    background: transparent;
+    border: 1px solid #ccc; /* Adjusted to match login */
+    border-radius: 4px; /* Adjusted to match login */
+    color: black;
+    font-size: 16px;
+    margin-top: 5px; /* Space between label and input box */
+  }
+  
+  /* Style labels to match the login, if they are different */
+  .inputbox label {
+    color: #2F4F4F; /* Green color for the label */
+    font-size: 16px; /* Adjust to match login */
+    font-weight: bold; /* Makes the label text bold */
+    margin-bottom: 5px; /* Space between label and input box */
+    display: block; /* Ensures the label is on its own line */
+  }
+  
+  /* Use the same button styling as login */
+  .buttonc {
+    background-color: #2F4F4F;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Full width */
+  }
+  
+  .buttonc:hover {
+    background-color: #2F4F4F;
+  }
+  
+  
+  .input-field {
+    width: calc(100% - 20px); /* Adjust width to allow for padding */
+    padding: 15px 10px;
+    background: transparent;
+    border: 1px solid #ccc; /* Adjusted to match login */
+    border-radius: 4px; /* Adjusted to match login */
+    color: black;
+    font-size: 16px;
+    margin-bottom: 20px; /* Space between input fields */
+  }
+  
+  .input-field:focus {
+    outline: none; /* Removes the default focus outline */
+    border-color: #76D7C4; /* Highlight color on focus */
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+  }
+  
+  
+
+
+
+.mester-component {
+    position: relative;
+    width: 300px;
+    padding: 20px;
+    margin: 70px auto;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+  }
+  .prefix {
+    font-size: 18px;
+    margin-right: 10px; /* Adjust the margin between the prefix and the input field */
+  }
+  .input-country {
+    font-size: 16px; /* Adjust the font size as needed */
+    width: calc(100% - 20px);
+    padding: 15px 10px;
+    background: transparent;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    color: black;
+    margin-top: 5px;
+  
+  
+  }
+  .inputbox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex; /* Add display:flex to make the children inline */
+    align-items: center; /* Align items vertically in the center */
+  }
+  
+  .inputbox input, .inputbox select {
+    width: calc(100% - 20px);
+    padding: 15px 10px;
+    background: transparent;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    color: black;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  
+  .inputbox select {
+    height: 60px; /* Adjust height for the dropdown */
+  }
+  
+  .inputbox label {
+    color: #28a745;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  button {
+    background-color: #76D7C4;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #66af9f;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 14px;
+    display: block; /* Ensure error messages are always visible when they should be */
+    margin-top: 5px;
+  }
+  
+  .control-fluid,.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .control-section .control-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    min-width: 185px;
+    padding-top: 15px;
+  }
+  .e-bigger .control-section .control-wrapper {
+    width: 100%;
+  }
+  .mester-component h1{
+    margin-left: 30px;
+    width: 400px;
+  }
+  .header {
+    font-weight: 600;
+    color: rgba(0, 0, 0, .54);
+    height: 48px;
+    padding: 15px 0 0 16px;
+    font-size: 16px;
+    background-color: #f5f5f5;
+  }
+  .fabric .header {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    color: #0078d7;
+    font-weight: 400;
+  }
+  .bootstrap .header {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+    color: #777;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    font-weight: 600;
+    font-size: 15px;
+    height: 48px;
+    padding: 15px 0 0 16px;
+  }
+  .fluent-dark .header {
+    background: #252423;
+    color: #2899F5;
+  }
+  .bootstrap5-dark .header {
+    background: #343A40;
+    color: #7B848D;
+  }
+  .fluent .header {
+    color: #2899F5;
+  }
+  .tailwind-dark .header {
+    background: #374151;
+    color: rgb(255, 255, 255);
+  }
+  .material3-dark .header,
+  .material-dark .header {
+    background: rgb(66, 66, 66);
+    color: rgb(255, 255, 255);
+  }
+  .fabric-dark .header {
+    background: rgb(40, 39, 39);
+    color: rgb(255, 255, 255);
+  }
+  .bootstrap-dark .header {
+    background: rgb(49, 49, 49);
+    color: rgb(255, 255, 255);
+  }
+  .e-bigger.bootstrap .header {
+    height: 44px;
+    font-size: 13px;
+  }
+  .highcontrast .header {
+    color: #fff;
+    background-color: #000;
+  }
+  .bootstrap4 .header {
+    color: #6c757d;
+  }
+  .ename {
+    display: block !important;
+    font-size: 16px;
+    margin-top: 8px;
+  }
+  .name {
+    padding: 4px 28px;
+    line-height: 1.2em;
+  }
+  .job {
+    font-size: 14px;
+    margin-top: -15px;
+    margin-bottom: 7px;
+  }
+  .bootstrap .job {
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 7px;
+  }
+  .e-bigger.bootstrap .job {
+    font-size: 14px;
+    margin-top: -15px;
+    margin-bottom: 7px;
+  }
+  .empImage {
+    margin: 6px 16px;
+    size: 50px;
+    float: left;
+  }
+  .value {
+    border-radius: 50%;
+    float: left;
+    margin-top: 0px;
+    position: relative;
+    left: 0px;
+    height: 24px;
+    width: 24px;
+  }
+  .material .value {
+    margin-top: 14px;
+  }
+  .highcontrast .value {
+    margin-top: 0px;
+  }
+  .highcontrast .name {
+    padding: 3px 28px;
+  }
+  .bootstrap .value {
+    left: -9px;
+    height: 28px;
+    width: 28px;
+    margin-top: 18px;
+  }
+  .fabric .value {
+    margin-top: 20px;
+  }
+  .material .name {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 0 0 30px;
+    bottom: 19px;
+    position: relative;
+    margin-right: -16px;
+  }
+  .bootstrap .name {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 1px 0 0 26px;
+    bottom: 23px;
+    position: relative;
+    margin-right: -24px;
+  }
+  .e-bigger .value {
+    margin-top: 0px;
+    height: 30px;
+    width: 30px;
+  }
+  .e-bigger.fabric .value {
+    margin-top: 2px;
+  }
+  .e-bigger.material .value {
+    margin-top: 17px;
+  }
+  .e-bigger .name {
+    padding: 0 0 0 36px;
+    bottom: 24px;
+    width: 121px;
+  }
+  .material3.e-bigger .name,
+  .material.e-bigger .name {
+    padding: 7px 21px 7px 34px;
+  }
+  .e-bigger.highcontrast .name {
+    padding: 5px 0 0 36px;
+    bottom: 24px;
+    width: 121px;
+  }
+  .fabric .name {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 0 3px 30px;
+    position: relative;
+    bottom: 21px;
+    margin-right: -23px;
+  }
+  .fabric.e-bigger .name {
+    padding: 7px 0 0 32px;
+    width: 100%;
+    position: relative;
+    overflow: initial;
+    text-overflow: unset;
+    bottom: 0px;
+    margin-right: -6px;
+  }
+  .bootstrap.e-bigger .name {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 0 0 29px;
+    position: relative;
+    bottom: 23px;
+    margin-right: -24px;
+  }
+  .bootstrap.e-bigger .value {
+    left: -9px;
+    margin-top: 17px;
+  }
+  .e-bigger .value {
+    position: relative;
+  }
+  .tailwind .name,
+  .tailwind-dark .name {
+    padding: 5px 28px;
+  }
+  .tailwind.e-bigger .name,
+  .tailwind-dark.e-bigger .name {
+    padding: 7px 0 0 32px;
+  }
+  .tailwind .value,
+  .tailwind-dark .value {
+    margin-top: 1px;
+  }
+  .tailwind.e-bigger .value,
+  .tailwind-dark.e-bigger .value {
+    margin-top: 0px;
+  }
+  #employees_popup.e-popup.e-popup .e-list-item * {
+    display: block;
+    text-indent: 0;
+  }
+  .e-bigger #employees_popup.e-popup .e-dropdownbase .e-list-item {
+    line-height: 42px;
+    height: 80px;
+  }
+  .e-bigger #employees_popup.e-popup.e-popup .empImage {
+    margin: 10px 16px;
+  }
+  .e-multi-select-wrapper .e-chips {
+    max-width: 166px;
+    overflow: hidden;
+  }
+  .e-multi-select-wrapper .e-chips {
+    padding: 0 4px 0 0px
+  }
+  .e-multi-select-wrapper .e-chips.e-mob-chip.e-chip-selected {
+    padding: 0 0 0 0px;
+  }
+  .bootstrap.e-bigger .e-chips.e-mob-chip.e-chip-selected .value {
+    left: 0px;
+  }
+  .material.e-bigger .name {
+    padding: 2px 0 0 36px;
+    bottom: 24px;
+    width: 100%;
+    position: relative;
+  }
+  .material.e-bigger .e-chips.e-mob-chip.e-chip-selected .name {
+    left: 0px;
+    width: 110px;
+    position: relative;
+  }
+  .fabric .e-multi-select-wrapper .e-chips.e-mob-chip.e-chip-selected .e-chips-close.e-icon {
+    left: 0px;
+  }
+  .control-content .control-section{
+    border-width: 0px !important;
+  }
+  .bootstrap4 .value {
+    margin-left: -4px;
+    height: 22px;
+    width: 22px;
+    margin-top: 1px;
+  }
+  .bootstrap4 .name {
+    padding: 2px 22px;
+    line-height: 1.5em;
+    margin-top: 1px;
+  }
+  .bootstrap4 #employees_popup.e-popup .empImage {
+    margin: 1px 16px;
+  }
+  .bootstrap4 #employees_popup.e-popup .job {
+    margin-top: 0;
+  }
+  .e-bigger.bootstrap4 #employees_popup.e-popup .job {
+    margin-top: -15px;
+  }
+  .tailwind #employees_popup.e-popup .job {
+    margin-top: -7px;
+    margin-bottom: 5px;
+  }
+  .e-bigger.tailwind #employees_popup.e-popup .job {
+    margin-top: -15px;
+    margin-bottom: 5px;
+  }
+  .e-bigger.bootstrap4 .value {
+    margin-top: 1px;
+    height: 26px;
+    width: 26px;
+    margin-left: -6px;
+  }
+  .bootstrap4.e-bigger .name {
+    padding: 0 0 0 25px;
+    line-height: 1.8em;
+    margin-top: 0px;
+  }
+  .bootstrap5 #employees_popup.e-popup .job,
+  .bootstrap-dark #employees_popup.e-popup .job,
+  .bootstrap5-dark #employees_popup.e-popup .job,
+  .tailwind-dark #employees_popup.e-popup .job {
+    margin-top: 0;
+  }
+  .e-bigger.bootstrap5 #employees_popup.e-popup .job,
+  .e-bigger.bootstrap-dark #employees_popup.e-popup .job,
+  .e-bigger.bootstrap5-dark #employees_popup.e-popup .job,
+  .e-bigger.tailwind-dark #employees_popup.e-popup .job {
+    margin-top: -15px;
+  }
+  
+  .fluent .e-multi-select-wrapper .e-chips,
+  .fluent-dark .e-multi-select-wrapper .e-chips {
+    padding: 0px 10px 0 4px;
+  }
+  
+  .fluent .value,
+  .fluent-dark .value {
+    margin-top: 0;
+  }
+  
+  .e-bigger.fluent .name,
+  .e-bigger.fluent-dark .name,
+  .e-bigger.bootstrap5 .name,
+  .e-bigger.bootstrap5-dark .name {
+    line-height: 2em;
+  }
+  
+  .bootstrap4.e-bigger .e-multi-select-wrapper .e-chips .e-chips-close::before {
+    top: 10px;
+  }
+  

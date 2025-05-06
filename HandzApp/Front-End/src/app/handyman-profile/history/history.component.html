@@ -1,0 +1,12 @@
+<div class="booking-list">
+  <h2>Your Service History</h2>
+  <ul>
+    <li *ngFor="let booking of bookings" [ngClass]="{'finished': booking.status === 'Finished', 'cancelled': booking.status === 'Cancelled'}">
+      <span class="date">{{ booking.date | date }}</span>
+      <span class="details">{{ booking.details }}</span>
+      <span class="status">
+        {{ booking.status }}
+      </span>
+    </li>
+  </ul>
+</div>

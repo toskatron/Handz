@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handyman Profile</title>
+  <link rel="stylesheet" href="profile.component.css"><!-- Update this with your actual CSS file path -->
+</head>
+<body>
+ 
+  <div class="profile-container">
+    <br><br><br><br><br><br>
+    <div class="profile-header">
+      <img [src]="this.handymanInfo?.imageURL" alt="Profile Picture" />
+      <div>
+        <h1>{{ handymanInfo?.name }}</h1>
+        <p>{{ handymanInfo?.email }}</p>
+        <p>0{{ handymanInfo?.phoneNumber }}</p>
+        <p>Expertise: {{ handymanInfo?.expertise }}</p>
+      </div>
+    </div>
+
+  <div class="container">
+    <h2>Services List</h2>  
+      <div class="service-and-add-section">
+        <div class="floating-stack">
+          <div class="search-bar">
+            <input type="search" id="service-search" name="q" [(ngModel)]="searchQuery" (input)="onSearchChange()" aria-label="Search services" placeholder="Search services..." required>
+          </div>
+          <div class="scrollable-list">
+            <dl>
+              <ng-container *ngFor="let service of filteredServiceListByName">
+                <dd (click)="selectService(service)">
+                  <strong>{{ service }}</strong>  <br>
+                </dd>
+              </ng-container>
+            </dl>
+          </div>
+          <h4>Selected service: {{selectedService.name}}</h4>
+        </div>
+        
+        <div class="button-container">
+          <button class="add-button" type="button" (click)="openAddServiceSection()">Add</button>
+          <button class="create-button" type="button" (click)="openCreateServiceSection()">Create</button>
+        </div>
+
+
+        <div class="add-service-section" *ngIf="showAddServiceSection">
+          <h3>{{ addServiceMode === 'add' ? 'Add' : 'Create' }} a Service</h3>
+          <input [(ngModel)]="selectedService.name" placeholder="Service Name" >
+          <input [(ngModel)]="selectedService.pricing" placeholder="Price">
+          <button (click)="performAddOrCreateOperation()">{{ addServiceMode === 'add' ? 'Add' : 'Create' }}</button>
+          <button (click)="cancelOperation()">Cancel</button>
+        </div>
+      </div>
+      
+  <!-- Single "Create" button in the bottom right corner -->
+  </div>
+
+
+    <div class="container">
+      <h2>My Services</h2>
+      <div class="floating-stack">
+        <div class="scrollable-listms">
+          <dl>
+            <br>
+            <!-- Replace this section with Angular code -->
+            <ng-container *ngFor="let service of handymanInfo?.services">
+              
+              <dt> <br></dt>
+              <dd>
+                {{ service.name }} - {{ service.pricing }}€
+                <button (click)="deleteService(service.service_Id!)">Delete</button>
+              </dd>
+            </ng-container>
+            <!-- End of Angular code -->
+          </dl>
+        </div>
+        
+      </div>
+    </div>
+      <div *ngIf="emergencies.length > 0" class="container">
+        <h2>Emergency Requests</h2>
+        <div class="floating-stack">
+          <div class="scrollable-list">
+            <dl>
+              <br>
+              <ng-container *ngFor="let emergency of emergencies">
+                <dt> <br></dt>
+                <dd>
+                  <h4>Client name: {{emergency.user.name}}</h4>
+                  <h6>Contact: 0{{emergency.user.phoneNumber}}</h6>
+                  <button (click)="acceptEmergency(emergency.bookingId)">Accept</button>
+                </dd>
+              </ng-container>
+            </dl>
+          </div>
+        </div>
+        
+      </div>
+    
+
+  </div>
+  
+  
+</body>
+</html>

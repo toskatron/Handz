@@ -1,0 +1,98 @@
+
+<body>
+  <div class="first-line">
+    <div class="expertise-selector">
+      <label for="expertiseSelect">Select an expertise:</label>
+      <select id="expertiseSelect" [(ngModel)]="selectedExpertise">
+        <option *ngFor="let expertise of expertises" [value]="expertise">{{ expertise }}</option>
+      </select>
+      <button (click)="fetchServicesMocked(selectedExpertise)">Find Service </button>
+    </div>
+  </div>
+
+<div class="floating-stack" *ngIf="showSelectAservice">
+  <div class="search-bar">
+    <input type="search" id="service-search" name="q" [(ngModel)]="searchQuery" (input)="onSearchChange()" aria-label="Search services" placeholder="Search services..." required>
+  </div>
+  <div class="my-scrollable-list">
+    <dl class="scrollable-list2">
+      <ng-container *ngFor="let service of filteredServiceListByName">
+        <dd (click)="selectService(service)">
+          <strong>{{ service }}</strong>  <br>
+         
+        </dd>
+      </ng-container>
+    </dl>
+  </div>
+  <h4>Selected service: {{selectedService}}</h4> 
+  <button class="mybutton" (click)="fetchHandymenMocked(selectedService)">Find Handyman</button>
+</div>
+
+<div class="card-container" *ngIf="!showSelectAservice">
+  <div *ngFor="let handyman of handymen" class="card" [ngClass]="{'expanded': handyman.isExpanded}">
+    <img [src]="handyman.imageURL" alt="Handyman image">
+    <h4>{{ handyman.name }}</h4>
+    <h4>Email: {{ handyman.email }}</h4>
+    <h4>Phone: 0{{ handyman.phoneNumber }}</h4>
+    <div class="button-container">
+      <button class="booking-button" (click)="openHandymanInfo(handyman)">View Profile</button>
+      <button class="booking-button booking-button2" (click)="toggleCardExpansion(handyman)">Make a Booking</button>
+    </div>
+    <!-- Booking Form Popup -->
+    <div class="booking-popup" [ngClass]="{'visible': handyman.isExpanded}">
+      <!-- Calendar for selecting available dates -->
+      <mat-form-field class="example-full-width">
+        <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="bookingSelectedDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <!-- Dropdown list for services -->
+      <mat-form-field>
+        <mat-label>Select a service</mat-label>
+        <mat-select [(ngModel)]="bookingSelectedService">
+          <mat-option *ngFor="let service of handyman.services" [value]="service">{{ service.name }}- {{service.pricing}}$</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Time selection between 8am and 6pm -->
+      <mat-form-field>
+        <mat-label>Select time</mat-label>
+        <mat-select [(ngModel)]="bookingSelectedTime">
+          <mat-option *ngFor="let time of availableTimes" [value]="time">{{ time }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Button to complete the reservation -->
+      <button mat-raised-button class="" (click)="completeReservation(handyman)">Complete Reservation</button>
+      <div *ngIf="handyman.reservationCompleted" class="confirmation-message">
+        Reservation completed for {{ handyman.name }}!
+      </div>
+
+      <ng-template #confirmationDialog>
+        <h2 mat-dialog-title>Reservation Completed!</h2>
+        <mat-dialog-content>
+          <p>Your reservation has been successfully completed.</p>
+        </mat-dialog-content>
+        <mat-dialog-actions>
+          <button mat-button mat-dialog-close>Close</button>
+        </mat-dialog-actions>
+      </ng-template>
+
+
+      <button mat-raised-button color="primary" (click)="toggleBookingForm(handyman)">Cancel</button>
+
+    </div>
+
+    <div *ngIf="handyman.showBookingConfirmation" class="confirmation-message">
+      Booking confirmed for {{ handyman.name }}!
+      <a routerLink="/reservations">View Reservations</a>
+    </div>
+  </div>
+</div>
+
+</body>
+
+      
+
+

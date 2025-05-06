@@ -1,0 +1,1 @@
+app.component is main screen with login,create client account etc

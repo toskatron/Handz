@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    form {
+      width: 100%;
+      padding: 65px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <form [formGroup]="settingsForm" (ngSubmit)="onSubmit()">
+    <h2>Settings</h2>
+    <div>
+      <label for="name">Name:<span class="required-star">*</span></label>
+      <input type="text" id="name" formControlName="name">
+      <span *ngIf="settingsForm.get('name')?.touched && settingsForm.get('name')?.invalid" class="required-message">Required field</span>
+    </div>
+
+    <div>
+      <label for="email">Email:<span class="required-star">*</span></label>
+      <input type="email" id="email" formControlName="email">
+      <span *ngIf="settingsForm.get('email')?.touched && settingsForm.get('email')?.invalid" class="required-message">Required field</span>
+    </div>
+
+    <div>
+      <label for="currentPassword">Current Password:<span class="required-star">*</span></label>
+      <input type="password" id="currentPassword" formControlName="currentPassword">
+      <span *ngIf="settingsForm.get('currentPassword')?.touched && settingsForm.get('currentPassword')?.invalid" class="required-message">Required field</span>
+    </div>
+
+    <div>
+      <label for="newPassword">New Password:<span class="required-star">*</span></label>
+      <input type="password" id="newPassword" formControlName="newPassword">
+      <span *ngIf="settingsForm.get('newPassword')?.touched && settingsForm.get('newPassword')?.invalid" class="required-message">Required field</span>
+    </div>
+
+    <button type="submit">Save</button>
+  </form>
+</div>

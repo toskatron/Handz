@@ -1,0 +1,86 @@
+.client-component {
+  position: relative;
+  width: 300px; /* Adjusted to match login */
+  padding: 20px; /* Adjusted to match login */
+  margin: 70px auto; /* Center the box on the page */
+  background: rgba(255, 255, 255, 0.4); /* Semi-transparent background */
+  border-radius: 10px; /* Adjusted to match login */
+  backdrop-filter: blur(15px); /* Blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: light border for definition */
+  display: flex;
+  flex-direction: column; /* Stacking fields vertically */
+  align-items: center;
+  justify-content: space-around; /* Distributes space evenly */
+  box-sizing: border-box;
+}
+.client-component h1{
+  margin-left: 100px;
+  width: 400px;
+}
+.inputbox {
+  position: relative;
+  width: 100%; /* Input boxes will fill the width of the .client-component */
+  margin-bottom: 20px; /* Adjusted spacing between input fields */
+}
+
+.inputbox input {
+  width: calc(100% - 20px); /* Adjust width to allow for padding */
+  padding: 15px 10px;
+  background: transparent;
+  border: 1px solid #ccc; /* Adjusted to match login */
+  border-radius: 4px; /* Adjusted to match login */
+  color: black;
+  font-size: 16px;
+  margin-top: 5px; /* Space between label and input box */
+}
+
+/* Style labels to match the login, if they are different */
+.inputbox label {
+  color: #2F4F4F; /* Green color for the label */
+  font-size: 16px; /* Adjust to match login */
+  font-weight: bold; /* Makes the label text bold */
+  margin-bottom: 5px; /* Space between label and input box */
+  display: block; /* Ensures the label is on its own line */
+}
+
+/* Use the same button styling as login */
+button {
+  background-color: #2F4F4F;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Full width */
+}
+
+button:hover {
+  background-color: #2F4F4F;
+}
+
+
+.input-field {
+  width: calc(100% - 20px); /* Adjust width to allow for padding */
+  padding: 15px 10px;
+  background: transparent;
+  border: 1px solid #ccc; /* Adjusted to match login */
+  border-radius: 4px; /* Adjusted to match login */
+  color: black;
+  font-size: 16px;
+  margin-bottom: 20px; /* Space between input fields */
+}
+
+.input-field:focus {
+  outline: none; /* Removes the default focus outline */
+  border-color: #76D7C4; /* Highlight color on focus */
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+}
+

@@ -1,0 +1,94 @@
+// POST http://localhost:8080/api/handymen/add
+{
+    "name": "Ionut Bibanu",
+    "email": "somon@example.com",
+    "password": "pescaru79",
+    "imageURL": "http://example.com/john.jpg",
+    "phoneNumber": "0773900902",
+    "services": [],
+    "bookings": []
+}
+//Sa creat Handyman cu id 1
+// POST http://localhost:8080/api/services/add
+{
+    "name": "REplace light bulbs",
+    "expertise": "Light Bulb Replacement",
+    "availability": "Monday to Friday",
+    "pricing": 25,
+    "description": "Replacing the light bulbs for your home lights"
+}
+//Sa creat serviciu cu id 1
+
+// POST http://localhost:8080/api/handymen/add
+{
+    "name": "Kutnik",
+    "email": "printesa@example.com",
+    "password": "calinvtm",
+    "imageURL": "http://example.com/john.jpg",
+    "phoneNumber": "756222333",
+    "services": [],
+    "bookings": []
+}
+//Sa creat Handyman cu id 1
+// POST http://localhost:8080/api/services/add
+{
+    "expertise": "Painting",
+    "availability": "Weekdays",
+    "pricing": 35,
+    "description": "Indoor and outdoor painting"
+}
+//Sa creat serviciu cu id 2
+
+
+
+//POST http://localhost:8080/api/handyman/2/addService
+{
+    "expertise": "Furniture Assembly",
+    "availability": "Saturdays",
+    "pricing": 40,
+    "description": "Assemble and install furniture"
+}
+//sa creat serviciu cu id 3 dar acesta e si introdus in Handymen-ul cu id 2
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+//info postman se parseaza, BODY:x-www-form-urlencoded ; doua variabile:handymanId si serviceId cu valorile lor specifice
+{
+  "handymanId": 1,
+  "serviceId": 2
+}
+//se leaga Handy men ul cu id 1 de serviciul cu id 2(gen e ft smecher)
+
+//cum facem un booking? well naspa rau
+//POST http://localhost:8080/api/bookings/add/1/2/1
+
+//fara json dam call la asta si vom avea un booking al user urlui cu id 1 pentru handyman ul cu id ul 2 pentru serviciul
+//cu id ul 1; Statusul se pune automat in pending iar timpul se seteaza pe now;Handyman ul primeste un email pentru a
+//accepta sau da decline la comanda;
+
+//POST http://localhost:8080/api/bookings/add  -fixed
+json:
+{
+    "userId":1,
+    "handymanId":2,
+    "serviceId":2
+}
+
+//for reviews:
+//POST: http://localhost:8080/api/reviews/add
+{
+    "userId":1,
+    "serviceId":2,
+    "handymanId":2,
+    "rating":4,
+    "comment":"Happy with this man's work"
+}
+
+
+//To send email:
+//POST?: http://localhost:8080/sendMail
+{
+    "recipient":"tdusan2002@gmail.com",
+    "msgBody":"Hello dear user /n/n This is the confirmation mail for creating your account!",
+    "subject":"Handz account created succesfully"
+}
+

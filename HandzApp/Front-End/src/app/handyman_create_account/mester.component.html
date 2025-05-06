@@ -1,0 +1,79 @@
+<div class="mester-component">
+  <h1>Create Handyman Account</h1><br><br>
+  <button (click)="openClientDialog()">Client</button>
+  <form (ngSubmit)="onSubmit()" #mesterForm="ngForm">
+    <div class="inputbox">
+      <input type="text" 
+            class="input-field" 
+            [(ngModel)]="mester.name" 
+            name="name" 
+            placeholder="Name" 
+            required>
+    </div>
+
+    <div class="inputbox">
+      <input type="email"
+             class="input-field"
+             [(ngModel)]="mester.email"
+             name="email"
+             placeholder="Email"
+             #emailField="ngModel"
+             (ngModelChange)="validateEmail(emailField)"
+             required>
+      <div *ngIf="emailField.errors && (emailField.dirty || emailField.touched)">
+        <span class="error-message" *ngIf="emailField.errors['required']">
+          Email is required.
+        </span>
+        <span class="error-message" *ngIf="emailField.errors['invalidEmail']">
+          Invalid email.
+        </span>
+      </div>
+    </div>
+
+    <div class="inputbox">
+      <input type="password" class="input-field" [(ngModel)]="mester.password" name="password" placeholder="Password" required>
+    </div>
+    <div class="inputbox">
+      <input type="file" class="input-field" (change)="onImageSelected($event)" accept="image/*">
+    </div>
+
+
+    <div class="inputbox">
+      <span class="prefix">+40</span>
+      <input type="text"
+             class="input-field"
+             [(ngModel)]="mester.phoneNumber"
+             name="phoneNumber"
+             placeholder=" Phone Number"
+             #phoneField="ngModel"
+             required
+             pattern="[0-9]*">
+      <div *ngIf="phoneField.errors && (phoneField.dirty || phoneField.touched)">
+        <span class="error-message" *ngIf="phoneField.errors['required']">
+          Phone number is required.
+        </span>
+        <span class="error-message" *ngIf="phoneField.errors['pattern']">
+          Please enter a valid phone number.
+        </span>
+      </div>
+    </div>
+
+
+    <div class="inputbox">
+      <select class="input-field" 
+      [(ngModel)]="mester.expertise" 
+      name="expertise"
+      placeholder="Expertise"
+      required>
+        <option value="" disabled selected>Select an Expertise</option>
+        <option value="plumber">Plumber</option>
+        <option value="electrician">Electrician</option>
+        <option value="lockpicker">Lockpicker</option>
+      </select>
+    </div>
+    
+    <div class="inputbox">
+      <button type="submit" [disabled]="mesterForm.invalid">Create Account</button>
+    </div>
+  </form>
+</div>

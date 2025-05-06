@@ -1,0 +1,38 @@
+<div class="login-component">
+  <h1>Login</h1>
+
+  <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+
+    <div class="inputbox">
+      <input type="email"
+             class="input-field"
+             [(ngModel)]="userEmail"
+             name="email"
+             placeholder="Email"
+             #emailField="ngModel"
+             (ngModelChange)="validateEmail(emailField)"
+             required>
+      <div *ngIf="emailField.errors && (emailField.dirty || emailField.touched)">
+        <span class="error-message" *ngIf="emailField.errors['required']">
+          Email is required.
+        </span>
+        <span class="error-message" *ngIf="emailField.errors['invalidEmail']">
+          Invalid email.
+        </span>
+      </div>
+    </div>
+
+    <div class="inputbox">
+      <label for="password">Password</label>
+      <input type="password"
+             id="password"
+             required
+             [(ngModel)]="userPassword"
+             #password="ngModel"
+             name="password"
+             class="form-control">
+    </div>
+
+    <button type="submit" (click)="onAutentificareClick()">Login </button>
+  </form>
+</div>

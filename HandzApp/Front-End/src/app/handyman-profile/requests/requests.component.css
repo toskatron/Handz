@@ -1,0 +1,81 @@
+html{
+  background: url('/assets/backgrounds/image7.png');
+}
+
+body {
+  display: flex; /* Enables Flexbox */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100vh; /* Sets the body height to be exactly the height of the viewport */
+  margin: 0; /* Resets any default margin */
+}
+
+.requests-container {
+  padding: 20px;
+  background-color: #34495e;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 600px; /* Limit the width of the container */
+  width: 100%; /* Ensures the container can shrink to fit its contents within the max-width */
+  margin: auto; /* Center the container on the available axis */
+}
+
+.request-list {
+  border: 1px solid #ddd;
+  padding: 10px;
+  list-style: none;
+  background-color: #f9f9f9;
+}
+
+.request-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  transition: background-color 0.3s;
+}
+
+.request-item:hover {
+  background-color: #f0f0f0; /* Slight highlight on hover */
+}
+
+.request-details {
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.request-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.accept-button, .decline-button {
+  padding: 5px 10px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.accept-button {
+  background-color: #4CAF50; /* Green */
+}
+
+.decline-button {
+  background-color: #f44336; /* Red */
+}
+
+.accept-button:hover, .decline-button:hover {
+  opacity: 0.85;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff;
+}

@@ -1,0 +1,75 @@
+
+<div class="profile-container">
+ 
+    <br><br><br>
+    <div class="profile-header">
+      <img [src]="this.handymanInfo?.imageURL" alt="Profile Picture" />
+      <div>
+        <h1>{{ handymanInfo?.name }}</h1>
+        <p>Email: {{ handymanInfo?.email }}</p>
+        <p>Phone number: +40{{ handymanInfo?.phoneNumber }}</p>
+        <p>Expertise: {{ handymanInfo?.expertise }}</p>
+      </div>
+
+      <div class="floating-stack2">
+        <h3>Provided Services:</h3>
+        <div class="floating-stack">
+          <div class="scrollable-list">
+            <dl>
+              <ng-container *ngFor="let service of handymanInfo?.services">
+                <dd (click)="selectService(service.name)">
+                  <strong>{{ service.name }}</strong> - {{service.pricing}} € <br>
+                </dd>
+              </ng-container>
+            </dl>
+          </div>
+          <h4>Selected service: {{selectedService.name}}</h4>
+          <button (click)="selectService('all')">All</button>
+        </div>
+      </div>
+      <!--
+      <div class="floating-stack">
+          <div class="search-bar">
+            <input type="search" id="service-search" name="q" [(ngModel)]="searchQuery" (input)="onSearchChange()" aria-label="Search services" placeholder="Search services..." required>
+          </div>
+          <div class="scrollable-list">
+            <dl>
+              <ng-container *ngFor="let service of filteredServiceListByName">
+                <dd (click)="selectService(service)">
+                  <strong>{{ service }}</strong>  <br>
+                </dd>
+              </ng-container>
+            </dl>
+          </div>
+          <h4>Selected service: {{selectedService.name}}</h4>
+        </div>
+      -->
+    </div>
+
+    <div class="profile-reviews">
+      <div class="container">
+          <p><strong>Reviews:</strong></p><br>
+          
+          <div class="review-container">
+              <div class="arrow left" (click)="scrollReviews(-1)">&lt;</div>
+              
+              <div class="my-max-cont">
+                <div class="reviews-wrapper" #reviewsWrapper>
+                  <div *ngFor="let review of reviews" class="review-card">
+                      <div class="review-name">{{ review.user.name }}</div>
+                      <div class="service-name">Service: {{ review.service.name }}</div>
+                      <div class="rating">{{ review.rating | starRating }}</div>
+                      <div class="review-comment">Client review: {{ review.comment }}</div>
+                  </div>
+              </div>
+              </div>
+              
+              <div class="arrow right" (click)="scrollReviews(1)">&gt;</div>
+          </div>
+      </div>
+    </div>
+  
+</div>
+
+
+

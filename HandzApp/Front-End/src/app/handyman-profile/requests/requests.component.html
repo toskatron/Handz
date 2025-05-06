@@ -1,0 +1,39 @@
+<div class="requests-container">
+  <h2>Accepted Shifts</h2>
+  <div class="request-list">
+    <div *ngFor="let booking of accepted" class="request-item" >
+      <!-- Display emergency bookings with a special background -->
+      <div class="request-details">
+        <h3>Request from: {{ booking.user.name }}</h3>
+        <p>Service: {{booking.service.name  }}</p>
+        <p>Date & Time: {{formatBookingTime(booking.bookingTime) }}</p>
+        <p>Contact: +40{{booking.user.phoneNumber}}   Email: {{booking.user.email}}</p>
+        <p></p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="requests-container">
+  <h2>My Requests</h2>
+   <!-- Check if there are emergency bookings and display them first -->
+  <div class="request-list">
+    <!-- Display regular bookings -->
+    <div *ngFor="let booking of bookings" class="request-item" >
+      <div class="request-details">
+        <p>Request from: {{ booking.user.name }}</p>
+        <p>Service: {{booking.service.name  }}</p>
+        <p>Date & Time: {{formatBookingTime(booking.bookingTime) }}</p>
+        <p>Expertise: {{booking.service.expertise}}</p>
+        <p></p>
+      </div>
+      <div class="request-actions">
+        <button (click)="confirmRequest(booking)" class="accept-button">Accept</button>
+        <button (click)="declineRequest(booking)" class="decline-button">Decline</button>
+      </div>
+    </div>
+      
+  
+  </div>
+</div>

@@ -1,0 +1,90 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  /*background: url('../../assets/background.png') no-repeat center center fixed;*/
+  background-size: cover;
+  background-color: transparent; /* Fallback color in case the image doesn't cover the whole area */
+}
+
+.login-component {
+  position: relative;
+  width: 300px; /* Smaller width for the entire component */
+  padding: 20px; /* Adjusted padding for inner spacing */
+  margin: 50px auto; /* Increased top margin to center vertically, auto to center horizontally */
+  background: rgba(255, 255, 255, 0.4); /* Semi-transparent background */
+  border-radius: 10px;
+  backdrop-filter: blur(15px); /* Blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: light border for definition */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Distributes space evenly */
+  box-sizing: border-box;
+}
+
+.inputbox {
+  position: relative;
+  width: 100%; /* Input boxes will fill the width of the .login-component */
+  margin-bottom: 20px; /* Adjusted spacing between input fields */
+}
+
+.inputbox input {
+  width: 100%;
+  padding: 15px 10px;
+  background: transparent;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  color: black;
+  font-size: 16px;
+  margin-top: 5px; /* Space between label and input box */
+}
+
+.inputbox label {
+  color: #2F4F4F; /* Green color for the label */
+  font-size: 16px; /* Increased font size for better visibility */
+  font-weight: bold; /* Optional: makes the label text bold */
+  margin-bottom: 5px; /* Space between label and input box */
+  display: block; /* Ensures the label is on its own line */
+}
+
+.inputbox input:focus ~ label,
+.inputbox input:valid ~ label {
+  top: -20px;
+  font-size: 12px;
+}
+
+button {
+  background-color: #2F4F4F;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color:#2F4F4F;
+}
+
+.register p a {
+  color: #2F4F4F;
+  text-decoration: none;
+}
+
+
+.inputbox .input-label {
+  color: #2F4F4F; /* Green color for the label */
+  font-size: 16px; /* Increase font size for better visibility */
+  font-weight: bold; /* Optional: makes the label text bold */
+  display: block; /* Ensures the label is on its own line */
+  margin-bottom: 5px; /* Space between label and input box */
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  display: block; /* Make sure error messages are visible */
+  margin-top: 5px;
+}

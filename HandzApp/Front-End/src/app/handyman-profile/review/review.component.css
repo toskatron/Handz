@@ -1,0 +1,40 @@
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  background: #2c3e50;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-card {
+  background: #fff;
+  border-left: 5px solid #2F4F4F;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.review-card h3 {
+  margin: 0;
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+.rating{
+  color: yellow;
+}
+.review-card p {
+  margin: 0;
+  color: #555;
+}
+
+.review-card:nth-child(odd) {
+  border-color: #2F4F4F;
+}
+
+.review-header {
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  background: #2c3e50;
+  margin: -20px -20px 20px -20px;
+}

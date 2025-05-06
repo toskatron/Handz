@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="review-header">
+    <h1>Client Reviews</h1>
+  </div>
+  <div *ngFor="let review of reviews" class="review-card">
+    <h3>{{ review.service.name }}</h3>
+    <p> Client name: {{ review.user.name  }}</p>
+    <p> Service type: {{ review.service.expertise  }}</p>
+    <p class="rating">Rating: {{ review.rating | starRating }}</p>
+    <p>Client review: {{ review.comment }}</p>
+  </div>
+</div>
+
+
+

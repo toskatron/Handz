@@ -1,0 +1,188 @@
+/* Reset margin and padding for all elements to ensure consistent styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding does not affect the total width or height of an element */
+}
+
+body {
+  background-image: url('/assets/welcome_background.png');
+  background-size: cover; /* Ensures the image covers the entire viewport */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 150px center; /* Image positioned 100px from the left and centered vertically */
+  min-height: 100vh; /* Ensure minimum height is the full height of the viewport */
+  padding-bottom: 50px;
+  overflow-x: hidden;
+  height: 900vh; /* Expand html and body to the viewport's height */
+  width: 100vw; /* Expand html and body to the viewport's width */
+  max-height: 200vh; /* Ensure html and body don't expand past the viewport's height */
+  margin-top: -50px;
+  margin-left: -40px;
+  margin-right: -200px;
+  position: fixed;
+  size: 4in 6in;
+  padding: 0;
+}
+/* Style the client container to fill the available space and center its children */
+.client-container {
+  display: flex; /* Use flexbox to center the content vertically and horizontally */
+  justify-content: start; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center;
+  height: 100vh; /* Ensure the container fills the remaining vertical space */
+  width: 30vw; /* Constrain the container to the viewport's width */
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  transform: none;
+  position: absolute;
+  overflow-x: hidden;
+  margin-left: 100px;
+}
+
+
+
+.client-content button {
+  padding: 10px 15px;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.client-content button:hover {
+  background-color: #345678;
+}
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.profile-header img {
+  border-radius: 50%;
+  width: 150px; /* Adjust the size as needed */
+  height: auto;
+}
+
+.profile-header > div {
+  flex-grow: 1;
+}
+
+.welcome-box {
+  /* Centering the welcome box if it's not the only element in .client-container */
+  margin: auto; /* This auto margin trick works when the element is a flex item */
+  /* Ensure the welcome box itself has no offsetting margins */
+  margin: 0;
+  /* Optional: Set a max-width if the box shouldn't stretch too wide */
+  max-width: 300px; /* Adjust as needed */
+  position: absolute;
+}
+
+/* Additional styles for the client content */
+.client-content {
+  padding: 20px;
+  position: fixed; /* Position the content box relative to the viewport */
+  top: 40%; /* Move the box to the center vertically */
+  left: 57%; /* Move the box to the center horizontally */
+  left: 57%; /* Move the box to the center horizontally */
+  left: 56%; /* Move the box to the center horizontally */
+  transform: translate(-50%, -50%); /* Adjust the positioning based on the center coordinates */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay to improve readability */
+  border-radius: 8px; /* Rounds the corners of the client-content box */
+  max-width: 400px; /* Prevents the content box from getting too wide on larger screens */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for the content box */
+  overflow-x: hidden;
+}
+
+/* Make text bolder and ensure it is legible against the background */
+h2, p {
+  font-weight: bolder; /* This will make your text bolder */
+  color: #ffffff; /* This will make your text white, adjust the color as needed */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Adds a shadow to make the text more legible against the background */
+}
+
+.content {
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  right: 50%;
+}
+
+
+.no-horizontal-scrollbar {
+  overflow-x: hidden;
+}
+
+.no-vertical-scrollbar {
+  overflow-y: hidden;
+}
+
+.no-scrollbars {
+  overflow: hidden;
+}
+.dashboard {
+  display: flex;
+  top: 0;
+  bottom: 0;
+  min-height: 100vh;
+  height: 100vh;
+}
+
+/* Style for the navigation menu on the left */
+.dashboard-menu {
+  width: 250px;
+  background-color: #2c3e50; /* Darker shade for a more modern look */
+  color: #ecf0f1;
+  padding: 20px;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Remove default margin */
+}
+
+.dashboard-menu li {
+  padding: 15px 0; /* More vertical padding for better touch targets */
+}
+
+.dashboard-menu a {
+  text-decoration: none;
+  color: #ecf0f1;
+  font-weight: bold;
+  font-size: 18px; /* Slightly larger for readability */
+  display: block; /* Make the entire area clickable */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.dashboard-menu a:hover, .dashboard-menu a:focus {
+  color: #3498db; /* A different color for a more noticeable hover effect */
+  background-color: #34495e; /* Subtle background highlight */
+}
+
+/* Style for the dashboard content on the right */
+.dashboard-content {
+  flex-grow: 1;
+  padding: 40px; /* Keep the padding consistent on all sides */
+  background-color: #ecf0f1; /* Lighter shade for contrast with the menu */
+  overflow-y: hidden;
+  width: calc(100% - 250px); /* Adjust the width based on your sidebar width */
+  height: 100%; /* Adds scrolling for overflow content */
+}
+
+/* Optional: Add a hover effect to the list items */
+.dashboard-menu li:hover {
+  background-color: #34495e;
+  cursor: pointer;
+}
+
+
+

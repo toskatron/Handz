@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="history.component.css">
+  <title>Service History</title>
+</head>
+<body>
+<div class="history-container">
+  <h1>Your Service History</h1>
+  <ul class="history-list">
+    <li *ngFor="let item of history; let i = index" [ngClass]="{'finished': item.status === 'Confirmed', 'cancelled': item.status === 'Declined', 'in-progress': item.status === 'Pending'}" class="history-item">
+      <div class="history-item-title">{{ item.bookingsL.handyman.name }} - {{ item.status }}</div>
+      <div class="history-item-title">Service: {{ item.bookingsL.service.name }}</div>
+      <div class="history-item-description">
+        {{ item.date }}
+      </div>
+      <button *ngIf="item.status === 'Confirmed' && !item.submitted" class="review-button" (click)="toggleReviewForm(i)">Review</button>
+      <button *ngIf="item.status === 'Declined' "  class="delete-button" (click)="deleteBooking(i)">Delete</button>
+      <div class="review-popup" *ngIf="item.showReview">
+        <div class="review-header">
+          <h2>Leave a Review for {{ item.serviceType }}</h2>
+        </div>
+        <div class="review-body">
+          <textarea id="reviewText-{{i}}" placeholder="Share your experience here" rows="4" class="review-textarea"></textarea>
+
+        <div class="star-rating">
+<span *ngFor="let star of [1, 2, 3, 4, 5]; let idx = index"
+      (click)="setRating(item, idx+1)"
+      [ngClass]="{'selected': idx < (item.rating ?? 0)}">★</span>
+
+        </div>
+          <div class="review-footer">
+            <button class="form-button cancel" (click)="toggleReviewForm(i)">Cancel</button>
+            <button class="form-button submit" (click)="submitReview(i)">Submit</button>
+          </div>
+      </div>
+
+</div>
+    </li>
+    </ul>
+</div>
+

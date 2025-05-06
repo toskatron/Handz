@@ -1,0 +1,138 @@
+html {
+  background-image: url('/assets/backgrounds/image7.png')
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-position: center;
+  background-color: #fafafa;
+  width: 80vh;
+  margin: auto;
+  top: 40px;
+  left: 10px;
+  position: relative;
+}
+
+
+h2{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+html {
+  height: 90vh;
+  margin: 0;
+  padding: 0;
+  background-color: #34495e;
+}
+
+form {
+  padding: 40px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  padding: 65px;
+}
+
+
+form > div {
+  margin-bottom: 20px;
+}
+
+
+
+
+label {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+
+input[type="text"], input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+  border-color: #2c3e50;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  outline: none;
+}
+
+
+button{
+  background-color: #2c3e50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+}
+
+
+button:hover, button:focus {
+  background-color: #141f29;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+
+input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover {
+  border-color: #333333;
+}
+
+
+.required-star {
+  color: red;
+}
+
+.required-message {
+  color: red;
+  font-size: 0.85em;
+  margin-top: 5px;
+}
+
+
+@media (max-width: 600px) {
+  html, body {
+    padding: 10px;
+  }
+
+
+  label,
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  button {
+    font-size: 0.9em;
+  }
+
+
+}

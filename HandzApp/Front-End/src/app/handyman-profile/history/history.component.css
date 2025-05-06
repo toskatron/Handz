@@ -1,0 +1,53 @@
+.booking-list {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.booking-list h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  border: none; /* Remove border */
+  padding: 20px;
+  margin-bottom: 10px; /* Spacing between items */
+  display: flex;
+  justify-content: space-between; /* Align items to the sides */
+  align-items: center;
+  border-radius: 8px; /* Rounded corners for items */
+  background-color: #fff; /* Background color for the items */
+  position: relative; /* For absolute positioning of the status */
+}
+
+.date, .details, .status {
+  margin: 0 10px;
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: black;
+  font-weight: normal;
+}
+
+
+.finished {
+
+  background-color: #e8f5e9;
+  border-left: 4px solid darkgreen;
+}
+
+.cancelled {
+  background-color: #ffebee;
+  border-left: 4px solid #f44336;
+}

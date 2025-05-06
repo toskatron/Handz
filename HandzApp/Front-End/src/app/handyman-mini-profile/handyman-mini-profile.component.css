@@ -1,0 +1,158 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding does not affect the total width or height of an element */
+  }
+
+.profile-background img{
+  width: 900px;
+  height: 500px;
+  z-index: 0;
+}
+
+
+    .profile-header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+  
+  .profile-header img {
+    border-radius: 50%;
+    width: 150px; /* Adjust the size as needed */
+    height: 155px;
+  }
+  
+  .profile-header > div {
+    flex-grow: 1;
+  }
+
+  .floating-stack .search-bar {
+    margin-bottom: 1rem;
+  }
+  .floating-stack h3,h4{
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .floating-stack .scrollable-list {
+    overflow-y: auto;
+    max-height: 300px;
+    margin-bottom: 1rem;
+  }
+  
+  .floating-stack dl {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .floating-stack dd {
+    margin-left: 0;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  .floating-stack2 {
+    background: #455a64;
+    color: #fff;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 1rem;
+  }
+  .floating-stack {
+    background: #455a64;
+    color: #fff;
+    height: 335px; /* Adjust height as needed */
+    width: 300px;
+    border-radius: 1rem;
+    padding-bottom: 1rem;
+  }
+  .floating-stack button{
+    padding: 12px 20px; /* Increases the padding to make the button larger */
+    margin: 10px; /* Adds margin around the buttons */
+    font-size: 16px; /* Increases the font size */
+    border-radius: 8px; /* Optional: Rounds the corners of the buttons */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+    background-color: #345678;
+    color: white; /* Button text color */
+    border: none; /* Removes the default border */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+
+  }
+  .profile-reviews p{
+    margin-left: 30px;
+  }
+
+  .review-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .reviews-wrapper {
+   
+    display: flex;
+    transition: transform 0.5s ease; /* Adjusted the transition duration */
+    margin: 0 20px;
+    padding: 0 10px;
+    position: relative;
+ 
+  }
+  
+
+
+.review-card {
+  flex: 0 0 auto;
+  margin: 10px; /* Adjust the spacing between reviews */
+  background-color: #ADD8E6; /* Set the same light blue tone with transparent opacity */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  text-align: center;
+  z-index: 1;
+}
+
+.reviewer-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.service-name {
+  font-size: 14px;
+  color: #555555; /* Dark gray for service name */
+  margin-bottom: 10px;
+}
+
+.rating {
+  font-size: 24px;
+  color: #FFD700; /* Gold color for stars */
+  margin-bottom: 10px;
+}
+
+.review-comment {
+  font-size: 14px;
+  color: #333333; /* Darker gray for review comment */
+}
+  
+  .arrow {
+    
+    cursor: pointer;
+    font-size: 50px;
+    line-height: 135px;
+    padding: 5px;
+    background-color: #ffffff; 
+    position: relative;
+    z-index: 2;
+  }
+  
+  .left {
+    left: 0;
+  }
+  
+  .right {
+    right: 0;
+  }
